@@ -1,7 +1,10 @@
+import { common } from "@/constants";
 import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 const AuthLayout = () => {
   return (
+    <>
     <Stack>
       <Stack.Screen
         name="sign-in"
@@ -16,6 +19,8 @@ const AuthLayout = () => {
         }}
       />
     </Stack>
+    <StatusBar backgroundColor={common.PRIMARY} style="light" />
+    </>
   );
 };
 

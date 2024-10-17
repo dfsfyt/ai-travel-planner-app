@@ -1,10 +1,12 @@
-import GetStart from '@/components/GetStart';
-import { View } from 'react-native';
-
-export default function HomeScreen() {
+import Onboarding from '@/components/Onboarding';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView } from 'react-native';
+import { common } from "@/constants"
+export default function App() {
   return (
-    <View className="flex-1">
-        <GetStart />
-    </View>
+    <SafeAreaView className="bg-primary h-full">
+        <Onboarding />
+        <StatusBar backgroundColor={common.PRIMARY} style='light' />
+    </SafeAreaView>
   );
 }
