@@ -19,7 +19,7 @@ import { useGlobalContext } from "@/context/GlobalProvider";
 import { router } from "expo-router";
 
 const Home = () => {
-  const { user, setUser, isLoggedIn, setIsLoggedIn } = useGlobalContext();
+  const { user } = useGlobalContext();
   const { data: posts, refetch } = useAppwrite(getAllPosts);
   const { data: latestPosts } = useAppwrite(getLatestPosts);
   const [refreshing, setRefreshing] = useState(false);
@@ -28,7 +28,6 @@ const Home = () => {
     await refetch();
     setRefreshing(false);
   };
-  console.log(user)
   return (
     <SafeAreaView className="bg-primary h-full">
       <FlatList
@@ -39,7 +38,7 @@ const Home = () => {
             title={item.title}
             thumbnail={item.thumbnail}
             video={item.video}
-            creator={item.users}
+            creator={item.creator}
           />
         )}
         ListHeaderComponent={() => (

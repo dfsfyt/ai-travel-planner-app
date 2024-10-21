@@ -23,7 +23,7 @@ const zoomIn = {
 
 const zoomOut = {
   0: {
-    scale: 1,
+    scale: 1.1,
   },
   1: {
     scale: 0.9,
@@ -72,12 +72,10 @@ const TrendingItem = ({ activeItem, item }: any) => {
   );
 };
 const Trending = ({ posts }: any) => {
-  const [activeItem, setActiveItem] = useState(posts[0]);
-  const onViewableItemsChanged = ({
-    viewableIems,
-  }: any) => {
-    if (viewableIems?.length > 0) {
-      setActiveItem(viewableIems[0].key);
+  const [activeItem, setActiveItem] = useState(posts.length > 1 ? posts[1] : posts[0]);
+  const onViewableItemsChanged = (info: any) => {
+    if (info.viewableItems?.length > 0) {
+      setActiveItem(info.viewableItems[0].key);
     }
   };
   return (

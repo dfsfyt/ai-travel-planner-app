@@ -25,7 +25,7 @@ const FormField = ({
       <Text className="text-base text-gray-100 font-agdregular">{label}</Text>
       <View className="border-2 border-primary w-full h-16 px-4 bg-black-100 rounded-xl focus:border-secondary items-center flex-row">
         <TextInput
-          className="flex-1 text-white font-semibold text-base items-center text-center"
+          className="flex-1 text-white font-semibold text-base items-center"
           value={value}
           placeholder={placeholder}
           placeholderTextColor="#7b7b8b"
