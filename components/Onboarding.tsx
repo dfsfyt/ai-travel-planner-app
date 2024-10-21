@@ -3,7 +3,7 @@ import React from "react";
 import { useRouter } from "expo-router";
 import { images } from "@/constants";
 import CustomButton from "./ui/CustomButton";
-import Logo from "./Logo";
+import Logo from "./ui/Logo";
 
 export default function Onboarding() {
   const router = useRouter();

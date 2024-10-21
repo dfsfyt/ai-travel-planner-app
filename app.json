@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "package": "com.dfsfyt.fan"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/bg.webp",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dfsfyt.fan"
     },
     "web": {
       "bundler": "metro",
