@@ -68,7 +68,7 @@ const TabsLayout = () => {
             ),
           }}
         />
-        <Tabs.Screen
+        {/* <Tabs.Screen
           name="saved"
           options={{
             title: "Saved",
@@ -77,7 +77,7 @@ const TabsLayout = () => {
               <TabIcon icon={icons.bookmark} color={color} name="Saved" focused={focused} />
             ),
           }}
-        />
+        /> */}
       </Tabs>
     </>
   );
